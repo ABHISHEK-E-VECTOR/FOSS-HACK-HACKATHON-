@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOPWIZ</title>
+    <link rel="icon" type="image/x-icon" href="./logo/favicon.ico">
+    <link rel="stylesheet" href="hp1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="logo">
+                    <!-- <img src="./logo/android-chrome-512x512.png" alt="SHOPWIZ" height="10" width="10"/> -->
+                </i>
+                <span>SHOPWIZ</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Recent Comparisons</a></li>
+                <!-- <li><a href="#">Price Alerts</a></li>
+                <li><a href="#">Deals</a></li> -->
+            </ul>
+            <div class="nav-icons">
+                <!-- <a href="#" title="Search"><i class="fas fa-search"></i></a> -->
+                <a href="#" title="Favorites"><i class="fas fa-heart"></i></a>
+                <a href="#" title="Menu"><i class="fas fa-bars"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Compare Prices Across Categories</h1>
+        <p class="subtitle">Find the best deals across multiple stores</p>
+        
+        <div class="search-box">
+            <input type="text" placeholder="Search for products to compare...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+
+        <div class="category-container">
+            <div class="comparison-card">
+                <i class="fas fa-utensils"></i>
+                <h3>Food</h3>
+                <p>Compare prices from different restaurants and stores</p>
+                <button class="compare-btn" onclick="toggleFoodOptions(this)">Compare Food</button>
+                <div class="food-options" style="display: none;">
+                    <button class="restaurant-btn" onclick="window.location.href='mcd.html'">
+                        <i class="fas fa-hamburger"></i> McDonald's
+                    </button>
+                </div>
+            </div>
+            
+            <!-- <div class="comparison-card">
+                <i class="fas fa-plane"></i>
+                <h3>Travel</h3>
+                <p>Find the best deals on flights and hotels</p>
+                <button class="compare-btn">Compare Travel</button>
+            </div> -->
+
+            <!-- <div class="comparison-card">
+                <i class="fas fa-shopping-basket"></i>
+                <h3>Grocery</h3>
+                <p>Compare prices across supermarkets</p>
+                <button class="compare-btn" onclick="window.location.href='blinkit.html'">Compare Grocery</button>
+            </div> -->
+
+            <div class="comparison-card">
+                <i class="fas fa-tshirt"></i>
+                <h3>Fashion</h3>
+                <p>Compare clothing prices across brands</p>
+                <button class="compare-btn" onclick="window.location.href='fashion.html'">Compare Fashion</button>
+            </div>
+        </div>
+    </div>
+    <script src="hp1.js"></script>
+</body>
+</html>

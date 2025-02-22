@@ -1,0 +1,340 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 35%, #c3cfe2 50%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #0d460b;
+    margin-bottom: 15px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.subtitle {
+    color: #0d460b;
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+.category-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.cat {
+    background: rgb(0, 0, 0);
+    color: #0d460b;
+    border: none;
+    padding: 20px 40px;
+    border-radius: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    min-width: 200px;
+}
+
+.cat:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    background: #0d460b;
+    color: white;
+}
+
+.menu-btn {
+    background: rgb(0, 0, 0);
+    color: #0d460b;
+    border: none;
+    padding: 20px 40px;
+    border-radius: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    min-width: 200px;
+}
+
+.menu-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    background: #0d460b;
+    color: rgb(3, 3, 3);
+}
+
+/* Search Box Styles */
+.search-box {
+    max-width: 600px;
+    margin: 0 auto 50px;
+    display: flex;
+    gap: 10px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 15px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+}
+
+.search-box input:focus {
+    border-color: #0d470b;
+    outline: none;
+}
+
+.search-box button {
+    padding: 0 25px;
+    background: #0d460b;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search-box button:hover {
+    background: #000;
+}
+
+/* Comparison Card Styles */
+.comparison-card {
+    background: linear-gradient(-135deg, rgb(186, 206, 150) 35%, #b4c0d3 50%);
+    /* background: -135deg rgb(186, 206, 150) 50%; */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.comparison-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.comparison-card i {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.comparison-card i :first-child {
+    color: #10442a;
+}
+
+.comparison-card i :last-child{
+    color: yellowgreen;
+}
+.comparison-card h3 {
+    color: #0d460b;
+    font-size: 1.4em;
+    margin-bottom: 15px;
+}
+
+.comparison-card p {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.compare-btn {
+    background: white;
+    color: #2c3e50;
+    border: 2px solid #2c3e50;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.compare-btn:hover {
+    background: #2c3e50;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .subtitle {
+        font-size: 1em;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-box button {
+        padding: 15px;
+    }
+
+    .comparison-card {
+        padding: 20px;
+    }
+}
+
+/* Updated Navbar Styles */
+.navbar {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.logo i {
+    color: #2c3e50;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.nav-links a:hover, 
+.nav-links a.active {
+    background: #2c3e50;
+    color: white;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-icons a {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.nav-icons a:hover {
+    color: #4a90e2;
+    transform: scale(1.1);
+}
+
+/* Responsive navbar */
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 1rem;
+    }
+
+    .nav-links {
+        display: none; /* For mobile, you might want to add a hamburger menu */
+    }
+
+    .logo span {
+        font-size: 1.2rem;
+    }
+
+    .nav-icons {
+        gap: 1rem;
+    }
+}
+
+.food-options {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.restaurant-btn {
+    padding: 8px 16px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.restaurant-btn:hover {
+    background-color: #e9ecef;
+    transform: translateY(-2px);
+}
+
+.mcd-menu {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-left: 20px;
+}
+
+.menu-item {
+    padding: 6px 12px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9em;
+}
+
+.menu-item:hover {
+    background-color: #f8f9fa;
+    transform: translateX(5px);
+}
+
+.menu-item i {
+    font-size: 1em;
+    color: #666;
+}
